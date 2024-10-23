@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Cafe Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('your-background-image-url.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            display: block;
+            margin: 0 auto;
+            width: 50px;
+            height: 50px;
+        }
+        .search-bar {
+            text-align: center;
+            margin: 10px 0;
+        }
+        .search-bar input {
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .categories {
+            display: flex;
+            overflow-x: auto;
+            white-space: nowrap;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+        .categories a {
+            padding: 10px 20px;
+            margin: 0 10px;
+            background-color: #2980B9;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            flex-shrink: 0;
+        }
+        .categories a:hover {
+            background-color: #3498DB;
+        }
+        .container {
+            margin-top: 180px; /* Adjust for the fixed header and categories */
+            padding: 20px;
+        }
+        h2 {
+            margin-top: 40px;
+            color: #2C3E50;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+        .menu-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .menu-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+        .menu-item .details {
+            flex-grow: 1;
+        }
+        .menu-item h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .menu-item p {
+            font-size: 14px;
+            color: #555;
+        }
+        .menu-item .price {
+            font-size: 16px;
+            color: #2980B9;
+            font-weight: bold;
+        }
+        /* Responsive */
+        @media (max-width: 600px) {
+            .menu-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            .menu-item img {
+                margin: 0 0 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="your-logo-url.jpg" alt="Cafe Logo" class="logo">
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div>
+    </header>
+
+    <nav class="categories">
+        <a href="#drinks">Drinks</a>
+        <a href="#coffee">Coffee</a>
+        <a href="#cold-coffee">Cold Coffee</a>
+        <a href="#shake">Shakes</a>
+        <a href="#cake-dessert">Cakes & Desserts</a>
+        <a href="#snacks">Snacks</a>
+        <a href="#souvenirs">Souvenirs</a>
+    </nav>
+
+    <div class="container">
+        <!-- Section 1: Drinks -->
+        <h2 id="drinks">Drinks</h2>
+        <div class="menu-item">
+            <img src="your-drink-image-url.jpg" alt="Drink Image">
+            <div class="details">
+                <h3>Fresh Lemonade</h3>
+                <p>Refreshing lemonade with fresh lemons and mint.</p>
+                <p class="price">$2.50</p>
+            </div>
+        </div>
+
+        <!-- Section 2: Coffee -->
+        <h2 id="coffee">Coffee</h2>
+        <div class="menu-item">
+            <img src="your-coffee-image-url.jpg" alt="Coffee Image">
+            <div class="details">
+                <h3>Espresso</h3>
+                <p>Strong espresso with freshly ground coffee beans.</p>
+                <p class="price">$3.00</p>
+            </div>
+        </div>
+
+        <!-- Section 3: Cold Coffee -->
+        <h2 id="cold-coffee">Cold Coffee</h2>
+        <div class="menu-item">
+            <img src="your-cold-coffee-image-url.jpg" alt="Cold Coffee Image">
+            <div class="details">
+                <h3>Iced Latte</h3>
+                <p>Chilled latte with ice and a splash of vanilla syrup.</p>
+                <p class="price">$3.50</p>
+            </div>
+        </div>
+
+        <!-- Section 4: Shakes -->
+        <h2 id="shake">Shakes</h2>
+        <div class="menu-item">
+            <img src="your-shake-image-url.jpg" alt="Shake Image">
+            <div class="details">
+                <h3>Chocolate Shake</h3>
+                <p>Rich and creamy chocolate shake.</p>
+                <p class="price">$4.00</p>
+            </div>
+        </div>
+
+        <!-- Section 5: Cakes & Desserts -->
+        <h2 id="cake-dessert">Cakes & Desserts</h2>
+        <div class="menu-item">
+            <img src="your-cake-dessert-image-url.jpg" alt="Cake Image">
+            <div class="details">
+                <h3>Cheesecake</h3>
+                <p>Delicious and creamy cheesecake with strawberry topping.</p>
+                <p class="price">$5.00</p>
+            </div>
+        </div>
+
+        <!-- Section 6: Snacks -->
+        <h2 id="snacks">Snacks</h2>
+        <div class="menu-item">
+            <img src="your-snack-image-url.jpg" alt="Snack Image">
+            <div class="details">
+                <h3>Grilled Sandwich</h3>
+                <p>Grilled sandwich with cheese and vegetables.</p>
+                <p class="price">$4.50</p>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="your-snack-image-url.jpg" alt="Snack Image">
+            <div class="details">
+                <h3>Grilled Sandwich</h3>
+                <p>Grilled sandwich with cheese and vegetables.</p>
+                <p class="price">$4.50</p>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="your-snack-image-url.jpg" alt="Snack Image">
+            <div class="details">
+                <h3>Grilled Sandwich</h3>
+                <p>Grilled sandwich with cheese and vegetables.</p>
+                <p class="price">$4.50</p>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="your-snack-image-url.jpg" alt="Snack Image">
+            <div class="details">
+                <h3>Grilled Sandwich</h3>
+                <p>Grilled sandwich with cheese and vegetables.</p>
+                <p class="price">$4.50</p>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="your-snack-image-url.jpg" alt="Snack Image">
+            <div class="details">
+                <h3>Grilled Sandwich</h3>
+                <p>Grilled sandwich with cheese and vegetables.</p>
+                <p class="price">$4.50</p>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="your-snack-image-url.jpg" alt="Snack Image">
+            <div class="details">
+                <h3>Grilled Sandwich</h3>
+                <p>Grilled sandwich with cheese and vegetables.</p>
+                <p class="price">$4.50</p>
+            </div>
+        </div>
+
+        <!-- Section 7: Souvenirs -->
+        <h2 id="souvenirs">Souvenirs</h2>
+        <div class="menu-item">
+            <img src="your-souvenir-image-url.jpg" alt="Souvenir Image">
+            <div class="details">
+                <h3>Handcrafted Mug</h3>
+                <p>Beautifully designed handcrafted coffee mug.</p>
+                <p class="price">$8.00</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
